@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\intro-to-dotnet-web-dev\\4-minimal-api\\1-complete\\PizzaStore\\PizzaStore.csproj": {}
+    "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj": {}
   },
   "projects": {
-    "F:\\intro-to-dotnet-web-dev\\4-minimal-api\\1-complete\\PizzaStore\\PizzaStore.csproj": {
+    "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\intro-to-dotnet-web-dev\\4-minimal-api\\1-complete\\PizzaStore\\PizzaStore.csproj",
+        "projectUniqueName": "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
         "projectName": "PizzaStore",
-        "projectPath": "F:\\intro-to-dotnet-web-dev\\4-minimal-api\\1-complete\\PizzaStore\\PizzaStore.csproj",
+        "projectPath": "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\intro-to-dotnet-web-dev\\4-minimal-api\\1-complete\\PizzaStore\\obj\\",
+        "outputPath": "F:\\DotnetAspUploadDownloadFile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -26,8 +26,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -38,8 +38,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",

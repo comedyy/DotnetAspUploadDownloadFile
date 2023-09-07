@@ -21,6 +21,17 @@ public class Uploader
 
     internal static IResult GetLastetPlayback(HttpRequest request)
     {
+        if(string.IsNullOrEmpty(_lastUploadName))
+        {
+            DirectoryInfo d = new DirectoryInfo("save");
+            List<FileInfo> files = d.GetFiles().ToList(); 
+            files.Sort((m, n)=>{return m.CreationTime.CompareTo(n.CreationTime);});
+            if(files.Count > 0)
+            {
+                _lastUploadName = files[0].Name;
+            }
+        }
+
         return Results.Ok(_lastUploadName);
     }
 
