@@ -32,7 +32,7 @@ app.MapPut("/pizzas", (Pizza pizza) => PizzaDB.UpdatePizza(pizza));
 app.MapDelete("/pizzas/{id}", (int id) => PizzaDB.RemovePizza(id));
 app.MapPost("/upload", Uploader.Upload);
 app.MapPost("/download", Uploader.Download);
-app.MapPost("/getLatestPlaybackName", Uploader.GetLastetPlayback);
+app.MapPost("/getLatestPlaybackName", Uploader.GetLatestPlayback);
 
 
 app.Run();

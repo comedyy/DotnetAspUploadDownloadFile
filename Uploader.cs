@@ -9,21 +9,26 @@ namespace PizzaStore;
 public class Uploader
 {
     static string _lastUploadName = "";
+    static Dictionary<string, string> _dicLatestUploadName = new Dictionary<string, string>();
+
     async internal static Task Download(HttpContext context)
     {
         var name = context.Request.Form["name"];
+        var platform = context.Request.Form["platform"];
+
         context.Response.ContentType = "image/png";
-        using (var fileStream = File.OpenRead($"save/{name}")) 
+        using (var fileStream = File.OpenRead($"save/{platform}/{name}")) 
         {
             await fileStream.CopyToAsync(context.Response.Body);
         }
     }
 
-    internal static IResult GetLastetPlayback(HttpRequest request)
+    internal static IResult GetLatestPlayback(HttpRequest request)
     {
-        if(string.IsNullOrEmpty(_lastUploadName))
+        var platform = request.Form["platform"];
+        if(_dicLatestUploadName.TryGetValue(platform, out var path))
         {
-            DirectoryInfo d = new DirectoryInfo("save");
+            DirectoryInfo d = new DirectoryInfo($"save/{platform}");
             List<FileInfo> files = d.GetFiles().ToList(); 
             files.Sort((m, n)=>{return m.CreationTime.CompareTo(n.CreationTime);});
             if(files.Count > 0)
@@ -43,7 +48,9 @@ public class Uploader
         }
 
         var fileName = request.Form["name"];
-        _lastUploadName = fileName;
+        var platform = request.Form["platform"];
+        
+        _dicLatestUploadName[platform] = fileName;
         var form = await request.ReadFormAsync();
         var fileForm = form.Files["file"];
 
@@ -56,8 +63,12 @@ public class Uploader
         {
             Directory.CreateDirectory("save");
         }
+        if(!Directory.Exists($"save/{platform}"))
+        {
+            Directory.CreateDirectory($"save/{platform}");
+        }
 
-        fileName = "save/" + fileName;
+        fileName = $"save/{platform}/{fileName}";
         await using(var stream = fileForm.OpenReadStream())
         {
             await using(var file = File.Create(fileName))
