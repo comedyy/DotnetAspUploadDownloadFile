@@ -26,7 +26,7 @@ public class Uploader
     internal static IResult GetLatestPlayback(HttpRequest request)
     {
         var platform = request.Form["platform"];
-        if(_dicLatestUploadName.TryGetValue(platform, out var path))
+        if(!_dicLatestUploadName.TryGetValue(platform, out var path))
         {
             DirectoryInfo d = new DirectoryInfo($"save/{platform}");
             List<FileInfo> files = d.GetFiles().ToList(); 
