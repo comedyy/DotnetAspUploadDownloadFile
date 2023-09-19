@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5YOKGr8o8CFXK5B33ynYOw+TAU9bu7tTKIvy2VopfPdhT/33Uac3ucJ9y0l3FZ6W6B9IFsWRfsqay1SsP3Jrxw==",
+  "dgSpecHash": "v6/0x8dvzZFx38HSxIzac94bmfJ59Imcldq0/0U2Rt6OjLiSP0lJXlJEwg4tHxT2IusbnaZXYXBLHf2B7MzwCg==",
   "success": true,
-  "projectFilePath": "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
+  "projectFilePath": "f:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

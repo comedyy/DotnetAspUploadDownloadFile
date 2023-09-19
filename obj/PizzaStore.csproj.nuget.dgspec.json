@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj": {}
+    "f:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj": {}
   },
   "projects": {
-    "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj": {
+    "f:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
+        "projectUniqueName": "f:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
         "projectName": "PizzaStore",
-        "projectPath": "F:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
+        "projectPath": "f:\\DotnetAspUploadDownloadFile\\PizzaStore.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\DotnetAspUploadDownloadFile\\obj\\",
+        "outputPath": "f:\\DotnetAspUploadDownloadFile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

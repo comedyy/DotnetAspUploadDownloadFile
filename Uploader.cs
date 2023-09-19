@@ -29,6 +29,11 @@ public class Uploader
         if(!_dicLatestUploadName.TryGetValue(platform, out var path))
         {
             DirectoryInfo d = new DirectoryInfo($"save/{platform}");
+            if(!d.Exists)
+            {
+                return Results.Ok("");
+            }
+
             List<FileInfo> files = d.GetFiles().ToList(); 
             files.Sort((m, n)=>{return m.CreationTime.CompareTo(n.CreationTime);});
             if(files.Count > 0)
