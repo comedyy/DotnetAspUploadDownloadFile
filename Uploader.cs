@@ -8,7 +8,6 @@ namespace PizzaStore;
 
 public class Uploader
 {
-    static string _lastUploadName = "";
     static Dictionary<string, string> _dicLatestUploadName = new Dictionary<string, string>();
 
     async internal static Task Download(HttpContext context)
@@ -38,11 +37,12 @@ public class Uploader
             files.Sort((m, n)=>{return m.CreationTime.CompareTo(n.CreationTime);});
             if(files.Count > 0)
             {
-                _lastUploadName = files[0].Name;
+                path = files[0].Name;
+                _dicLatestUploadName.Add(platform, path);
             }
         }
 
-        return Results.Ok(_lastUploadName);
+        return Results.Ok(path);
     }
 
     async internal static Task<IResult> Upload(HttpRequest request)
