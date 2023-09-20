@@ -45,6 +45,14 @@ public class Uploader
         return Results.Ok(path);
     }
 
+    internal static async Task GetUnSyncMessage(HttpContext context)
+    {
+        var msg = context.Request.Form["msg"];
+        var error = context.Request.Form["errorMsg"];
+
+        await File.AppendAllLinesAsync("unsync.txt", new string[]{msg, error});
+    }
+
     async internal static Task<IResult> Upload(HttpRequest request)
     {
         if(!request.HasFormContentType)
