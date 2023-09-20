@@ -10,6 +10,14 @@ public class Uploader
 {
     static Dictionary<string, string> _dicLatestUploadName = new Dictionary<string, string>();
 
+    internal static async Task ComprareLog(HttpContext context)
+    {
+        var msg = context.Request.Form["msg"];
+        var path = context.Request.Form["path"];
+
+        await File.WriteAllTextAsync(path, msg);
+    }
+
     async internal static Task Download(HttpContext context)
     {
         var name = context.Request.Form["name"];
