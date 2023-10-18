@@ -18,7 +18,15 @@ public class Uploader
         await File.WriteAllTextAsync(path, msg);
     }
 
-    async internal static Task Download(HttpContext context)
+    internal static async Task uploadError(HttpContext context)
+    {
+        var msg = context.Request.Form["gitGuid"];
+        var path = context.Request.Form["battleGuid"];
+
+        await File.WriteAllTextAsync(path, msg);
+    }
+
+    async internal static Task Download(HttpContext context)    
     {
         var name = context.Request.Form["name"];
         var platform = context.Request.Form["platform"];

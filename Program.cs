@@ -35,6 +35,7 @@ app.MapPost("/download", Uploader.Download);
 app.MapPost("/getLatestPlaybackName", Uploader.GetLatestPlayback);
 app.MapPost("/GetUnSyncMessage", Uploader.GetUnSyncMessage);
 app.MapPost("/ComprareLog", Uploader.ComprareLog);
+app.MapPost("/uploadError", Uploader.uploadError);
 
 
 app.Run();
