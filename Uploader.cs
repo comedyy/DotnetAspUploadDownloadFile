@@ -23,7 +23,12 @@ public class Uploader
         var msg = context.Request.Form["gitGuid"];
         var path = context.Request.Form["battleGuid"];
 
-        await File.WriteAllTextAsync(path, msg);
+        if(!Directory.Exists("error"))
+        {
+            Directory.CreateDirectory("error");
+        }
+
+        await File.WriteAllTextAsync($"error/{path}", msg);
     }
 
     async internal static Task Download(HttpContext context)    
